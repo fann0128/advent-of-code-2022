@@ -9,16 +9,12 @@ f.close
 width = len(my_map[0])
 height = len(my_map)
 
-number_of_visible = 0
-
 highest_score = 0
 
 for x in range(width):
     for y in range(height):
         # print(x, y)
-        if x == 0 or y == 0 or x == width-1 or y == height-1 :
-            number_of_visible += 1
-        else :
+        if x != 0 and y != 0 and x != width-1 and y != height-1 :
             # make sure the number is the biggest at least in one direction
             current_tree = my_map[x][y]
             # left
